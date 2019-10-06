@@ -10,3 +10,8 @@ Stdlog:
 		*For now not recommended for production purposes.
 
 
+Installation:
+
+	Clone the repo to the workingspace directory: $ git clone [repository-url]
+	Build Pipenv to the workingspace directory:   $ pipenv shell
+	Install The package and dependencies :        $ pipenv install
