@@ -197,8 +197,11 @@ class stdlog:
                     yval = np.linspace(field_top, field_bottom, 10)
                     # print("1{}{}".format(numtracks, grpos))
                     ax = fig.axes[grpos]
-                    line = mlines.Line2D([100,100], [9000, 13000], color='red')
+                    line = mlines.Line2D([val,val], [9000, 13000], color='black')
                     ax.add_line(line)
-                    
+                    if state == 'shaded':
+                        x2 = well['GR']
+                        y =  well['DEPTH']
+                        ax.fill_betweenx(y, val, x2, where = x2<val, interpolate = True, color = '#d6cc0b')
             return plt     
         
